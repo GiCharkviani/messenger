@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+/* main holder */
+.form-holder{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+/* login form holder */
+.login-form{
+  width: 50%;
+  height: 50%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--light);
+}
+.title-holder{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 10%;
+  align-items: center;
+  justify-content: center;
+}
+/* title */
+.title{
+  margin-top: 2vh;
+  font-family: 'Alfa Slab One', cursive;
+  cursor: context-menu;
+  font-size: 2vw;
+}
+
+/* inputs */
+.inputs{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 70%;
+  align-items: center;
+  justify-content: center;
+}
+.inputs input {
+  width: 50%;
+  height: 20%;
+  margin-bottom: 20px;
+  border: none;
+  padding: 10px;
+  background-color: rgb(221, 217, 217);
+  border-radius: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.inputs input:focus{
+  outline: none;
+}
+
+/* buttons */
+.buttons{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 20%;
+  align-items: center;
+  justify-content: center;
+}
+.buttons button{
+  width: 50%;
+  height: 100%;
+  border: none;
+  font-weight: 700;
+  color: bisque;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  font-size: 2vw;
+}
+.buttons button:disabled{
+  background-color: grey;
+}
+.buttons button:disabled:hover{
+  background-color: grey;
+  color: bisque;
+}
+.buttons .login-btn{
+  border-right:1px solid white!important;
+  background-color: rgb(94, 117, 248);
+}
+.buttons .login-btn:hover{
+  background-color: rgb(189, 197, 241);
+  color: whitesmoke;
+}
+
+.buttons .registrate-btn{
+  border-left:1px solid white!important;
+  background-color: rgb(248, 138, 94);
+}
+.buttons .registrate-btn:hover{
+  background-color: rgb(180, 162, 154);
+  color: whitesmoke;
+}
+
+/* Responsive */
+@media only screen and (max-width:650px){
+  .buttons button{
+    font-size: 3vw;
+  }
+  .login-form {
+    width: 70%;
+  }
+}
+@media only screen and (max-width:250px){
+  .buttons button{
+    font-size: 4vw;
+  }
+  .login-form {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width:600px){
+  .buttons button{
+    font-size: 4vw;
+  }
+}
+

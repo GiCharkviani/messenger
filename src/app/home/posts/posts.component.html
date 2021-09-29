@@ -1,0 +1,47 @@
+<!-- post page holder -->
+<div class="post-holder">
+  <!-- post writer -->
+  <div class="post-writer">
+    <textarea maxlength="300" #input type="text" placeholder="Post"></textarea>
+    <button (click)="addPost(input.value)">POST</button>
+  </div>
+
+  <div
+    *ngIf="loading; else postsContainer"
+    class="d-flex justify-content-center mt-3"
+  >
+    <div class="spinner-border text-secondary" role="status">
+      <span class="sr-only"></span>
+    </div>
+  </div>
+
+  <ng-template #postsContainer>
+    <!-- posts -->
+    <div class="posts">
+      <div *ngFor="let post of postsArr" class="post">
+        <div class="person">
+          <img (click)="textHim(post.post.authorUid, $event)" [src]="post.post.img" />
+        </div>
+
+        <div class="post-content">
+          <div class="text-content">
+            <h3>{{ post.post.text }}</h3>
+          </div>
+
+          <div class="like-holder" (click)="giveLike(post.key)">
+            <div
+              class="like"
+              #like
+              [ngClass]="{'liked': post.liked, 'notLiked': !post.liked}"
+            >
+              <p>{{ post.liked ? 'Unlike' : 'Like'}}</p>
+            </div>
+            <div class="likes">
+              <p>{{ post.post.likes.num }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

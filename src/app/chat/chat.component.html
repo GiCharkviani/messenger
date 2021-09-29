@@ -1,0 +1,28 @@
+<div class="main-holder">
+  <!--pm users list-->
+  <div class="users-list" [@divState]="state">
+    <app-user-list (markedUser)="gotUser($event)"></app-user-list>
+  </div>
+
+  <!--responsive sign-->
+  <div class="call" (click)="show(); iconChange = !iconChange">
+    <i *ngIf="iconChange" class="fas fa-users"></i>
+    <i *ngIf="!iconChange" class="fas fa-long-arrow-alt-left"></i>
+  </div>
+
+  <!--PM Route-->
+
+  <div *ngIf="selectChat; else chatIsHere" class="select-chat">
+    <h2>Select Chat</h2>
+  </div>
+
+  <ng-template #chatIsHere>
+    <div class="pm-route">
+      <div class="user-info">
+        <img [src]="activeUser.img" alt="Loading..." />
+        <h6>{{ activeUser.name }}</h6>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </ng-template>
+</div>

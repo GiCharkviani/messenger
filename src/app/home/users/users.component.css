@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
+/* main holder */
+.cards-holder {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom: 50px;
+  margin-top: 5px;
+  background-color: var(--users-cards-holder-background-color);
+}
+
+/* user card */
+.registrated-user {
+  width: 50vw;
+  height: 20vh;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 20px;
+  display: flex;
+  margin-bottom: 20px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* foto adjust */
+.registrated-user img {
+  width: 30%;
+  height: 100%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+/* text adjust */
+.registrated-user .text {
+  font-family: "ZCOOL KuaiLe", cursive;
+  width: 2vw;
+  margin: 0 !important;
+  display: flex;
+  width: 55%;
+  justify-content: center;
+  align-items: center;
+  word-break: break-all;
+  cursor: context-menu;
+  color: var(--users-registrated-user-text-color);
+}
+
+/* button adjust */
+.registrated-user .button {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 15%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.registrated-user .button button {
+  height: 100%;
+  border: none;
+  width: 100%;
+  font-size: 5vw;
+  background-color: var(--users-registrated-user-background-color);
+  color: var(--users-registrated-user-color);
+}
+.registrated-user .button:hover button {
+  background-color: rgb(113, 192, 245);
+  color: white;
+}
+
+/* search */
+.search{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.search input {
+  border: none;
+  border-bottom: 2px solid grey;
+  padding: 5px;
+  background-color: transparent;
+  width: 50%;
+  color: var(--searchInputColor);
+}
+.search input:focus {
+  outline: none;
+  border-bottom: 2px solid rgb(175, 52, 247);
+}
+
+
+/* responsive adj. */
+@media only screen and (max-width: 700px) {
+  .registrated-user {
+    width: 70vw;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .registrated-user {
+    width: 100vw;
+  }
+  .cards-holder {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 200px) {
+  .registrated-user .text {
+    display: none;
+  }
+  .registrated-user img {
+    width: 80%;
+  }
+  .registrated-user .button {
+    width: 20%;
+  }
+}

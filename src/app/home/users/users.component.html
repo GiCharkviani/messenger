@@ -1,0 +1,31 @@
+<div *ngIf="loading; else usersBlock" class="d-flex justify-content-center">
+  <div class="spinner-border text-secondary" role="status">
+    <span class="sr-only"></span>
+  </div>
+</div>
+
+<ng-template #usersBlock>
+  <div class="cards-holder">
+    <div class="search">
+      <input
+        type="text"
+        (input)="search($event)"
+        (change)="search($event)"
+        placeholder="Search"
+      />
+    </div>
+
+    <div class="registrated-user" *ngFor="let user of registratedUsers">
+      <img [src]="user.img" />
+      <div class="text">
+        <h2>{{ user.name }}</h2>
+        <!-- <div *ngIf="user.unseen[currentUser]">yes</div> -->
+      </div>
+      <div class="button">
+        <button (click)="route(user.id)">
+          <i class="far fa-comments"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>

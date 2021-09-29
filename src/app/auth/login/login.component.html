@@ -1,0 +1,30 @@
+<div class="form-holder">
+
+  <div *ngIf="loading; else loginFormContainer" class="spinner-border text-secondary" role="status">
+    <span class="sr-only"></span>
+  </div>
+
+  <ng-template #loginFormContainer>
+    <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()">
+
+      <div class="title-holder">
+        <p *ngIf="error" class="title" style="color: red!important;">{{error}}</p>
+        <h5 *ngIf="!error" class="title">LOGIN</h5>
+      </div>
+
+
+      <div class="inputs">
+        <input placeholder="Email" formControlName="email" type="text" class="form-email" >
+        <input placeholder="Password" formControlName="password" type="password" class="form-password" autocomplete="on">
+      </div>
+
+      <div class="buttons">
+        <button type="submit" [disabled]="!loginForm.valid" class="login-btn">Login</button>
+        <button [routerLink]="['/auth/registrate']" class="registrate-btn" type="button">Registrate</button>
+      </div>
+    </form>
+  </ng-template>
+
+
+</div>
+

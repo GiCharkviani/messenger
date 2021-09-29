@@ -1,0 +1,45 @@
+:root{
+  --header-background-color: rgba(85, 84, 84, 0.465);
+  --header-color: whitesmoke;
+  --header-logout-color: rgb(85, 85, 85);
+  --header-i-hover-color: rgb(245, 243, 243);
+  --posts-background: white;
+
+
+  --users-cards-holder-background-color: white;
+  --users-registrated-user-background-color: rgba(68, 38, 204, 0.404);
+  --users-registrated-user-text-color: black;
+  --users-registrated-user-title-color:rgb(129, 125, 125);
+  --users-registrated-user-color: rgb(100, 105, 92);
+
+  --chat-main-background-color: white;
+  --chat-color:black;
+  --chat-user-list-background-color:white;
+  --chat-user-list-color:black;
+  --chat-send-message-field: white;
+  --userListColor: white;
+  --searchInputColor: black;
+  --light: white;
+}
+
+.theme i{
+  position: fixed;
+  bottom: 20%;
+  right: 5px;
+  font-size: 2em;
+  color: black;
+  cursor: pointer;
+  font-size: 3vw;
+}
+.theme i:hover{
+  color: darkblue;
+}
+
+.fa-sun {
+  color: white!important;
+}
+.fa-sun:hover{
+  color: rgb(55, 205, 243)!important;
+}
+
+

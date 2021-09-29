@@ -1,0 +1,61 @@
+/* pm users */
+.pm-users-list{
+  height: 97%!important;
+  padding: 0px!important;
+  overflow: auto;
+}
+
+/* messages title */
+.title{
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  padding-left: 20px;
+  height: 5%;
+  width: 100%;
+}
+.title span {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.title span:hover {
+  color: brown;
+}
+
+/* pm user */
+.pm-user{
+  list-style-type: none;
+  margin: 0!important;
+  display: flex;
+  align-items: center;
+  padding-left: 20px!important;
+  padding-right: 20px!important;
+  padding-top: 10px!important;
+  padding-bottom: 10px!important;
+  margin-bottom: 10px!important;
+  cursor: pointer;
+  background-color: var(--userListColor)!important;
+}
+
+.pm-user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.pm-user section {
+  display: flex;
+  flex-direction: column;
+}
+.pm-user section  h6{
+  margin: 0;
+}
+
+/* Responsive setting-up */
+@media only screen and (max-width: 675px){
+  .title {
+    font-size: 3vw;
+    height: auto;
+  }
+
+}

@@ -1,0 +1,3 @@
+<nav class="navHome">
+  <li [class]="navItem.last" *ngFor="let navItem of navigation" [routerLink]="[navItem.route]" [routerLinkActiveOptions]="navItem.routeActOpt" [routerLinkActive]="[navItem.actClass]" [innerHTML]="navItem.icon"></li>
+</nav>

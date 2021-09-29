@@ -1,0 +1,36 @@
+<div class="messages-field-holder">
+  <div
+    *ngIf="loading; else chattingContainer"
+    class="d-flex justify-content-center"
+  >
+    <div class="spinner-border text-secondary" role="status">
+      <span class="sr-only"></span>
+    </div>
+  </div>
+
+  <ng-template #chattingContainer>
+    <ul class="messages" #chatContainer>
+      <li
+        me
+        [messageOwnerId]="message.from"
+        class="message-item"
+        *ngFor="let message of PrivateMessages"
+      >
+        {{ message.message }}
+        <br />
+      </li>
+    </ul>
+  </ng-template>
+
+  <div class="send-message-field">
+    <textarea
+      (keydown.enter)="sendMessage(message)"
+      #message
+      type="text"
+      placeholder="Reply"
+    ></textarea>
+    <button (click)="sendMessage(message)">
+      <i class="fas fa-paper-plane"></i>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<ul class="pm-users-list">
+  <!--Message title-->
+  <h4 class="title">
+    <span [routerLink]="['../']"><i class="fas fa-undo"></i></span>
+    Messages
+  </h4>
+
+  <!--Message List items-->
+  <div
+    *ngIf="loading; else userListContainer"
+    class="d-flex justify-content-center"
+  >
+    <div class="spinner-border text-secondary" role="status">
+      <span class="sr-only"></span>
+    </div>
+  </div>
+
+  <ng-template #userListContainer>
+    <div>
+      <li
+        *ngFor="let user of pmUsersList"
+        (click)="selectedUser(user.id, user.name, user.img)"
+        class="pm-user"
+        [ngStyle]="{
+          color: clickedPm === user.id ? 'lightblue' : 'grey',
+          'font-weight': clickedPm === user.id ? 'bold' : 'normal'
+        }"
+      >
+        <img [src]="user.img" />
+        <section>
+          <h6 #userList>{{ user.name }}</h6>
+
+          <span class="text-muted" *ngIf="user.lastMessage.length > 5">
+            {{ user.lastMessage.substr(0, 5) + "..." }}
+          </span>
+          <span class="text-muted" *ngIf="user.lastMessage.length <= 5">
+            {{ user.lastMessage.substr(0, 5) }}
+          </span>
+        </section>
+      </li>
+    </div>
+  </ng-template>
+</ul>

@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap');
+
+/*main holder*/
+.main-holder{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 100%;
+  height: 100%!important;
+  background-color: var(--chat-main-background-color);
+  color: var(--chat-color);
+}
+/*Users holder*/
+.users-list{
+  height: 100%!important;
+  background-color: var(--chat-user-list-background-color)!important;
+  color: var(--chat-user-list-color)!important;
+}
+/*PM holder*/
+.pm-route{
+  height: 100%!important;
+}
+
+/* select chat */
+.select-chat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-family: 'Gemunu Libre', sans-serif;
+  cursor: context-menu;
+  background-image:url('https://icon-library.com/images/chat-icon-png/chat-icon-png-22.jpg');
+  background-repeat: no-repeat;
+  background-size:contain;
+}
+
+/* activated user short info */
+.user-info{
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.user-info img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+h6 {
+  margin: 0!important;
+}
+
+@media only screen and (max-height: 530px) and (max-width: 400px){
+  .user-info img {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+
+
+/*responsive button */
+.call {
+  position: absolute;
+  top: 2px;
+  right: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+/*responsive*/
+@media only screen and (max-width: 850px){
+  .users-list{
+    display: none;
+  }
+  .main-holder{
+    grid-template-columns: 100%;
+  }
+  .call {
+    display: inline;
+    font-size: 20px;
+    color: #B6C8A9;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .call {
+    font-size: 7vw;
+    right: 5px;
+  }
+}
+
+
+

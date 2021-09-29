@@ -1,0 +1,133 @@
+/* main holder */
+.messages-field-holder{
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 83%;
+  width: 100%;
+}
+
+/* messages ul holder */
+.messages {
+  padding: 0!important;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 94%;
+  overflow: auto;
+  margin: 0!important;
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* each message style */
+.message-item{
+  list-style-type: none;
+  background-color: #B1B1B1;
+  margin-bottom: 10px;
+  padding: 7px;
+  padding-right: 15px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 400;
+  width:auto;
+  align-self: flex-start!important;
+  display: inline;
+  word-break: break-all;
+}
+
+
+/*Directive adds*/
+.me{
+  align-self: flex-end!important;
+  text-align: right!important;
+  padding: 7px;
+  padding-left: 15px;
+  background-color: #ED3A2E;
+}
+
+.this{
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 0;
+}
+
+.thisMe{
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 0;
+}
+
+
+
+/*message sending field */
+.send-message-field {
+  background-color: var(--chat-send-message-field);
+  height: 13%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 10px solid var(--chat-send-message-field);
+  border-bottom: 10px solid var(--chat-send-message-field);
+}
+/*textarea field*/
+.send-message-field textarea {
+  border: none;
+  background-color: #F5F1F2;
+  padding-left: 60px;
+  width: 90%;
+  height: 100%;
+  padding: 10px 30px;
+  resize: none;
+}
+
+.send-message-field textarea:focus{
+  outline: none;
+}
+
+
+/*button*/
+.send-message-field button {
+  border: none;
+  width: 10%;
+  height: 100%;
+}
+.send-message-field button:hover {
+  background-color: silver;
+}
+
+/*responsive work*/
+
+@media only screen and (max-width: 720px){
+  .send-message-field button {
+    font-size: 2vw;
+    height: 100%;
+  }
+  .send-message-field textarea {
+    padding-left: 40px;
+  }
+}
+@media only screen and (max-width: 270px){
+  .send-message-field textarea {
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (max-height: 666px){
+  .messages {
+    margin-bottom: 10px;
+  }
+  .send-message-field textarea{
+    padding: 2vh 6vh;
+    font-size: 2.5vh;
+    height: 100%;
+  }
+}
+
+
